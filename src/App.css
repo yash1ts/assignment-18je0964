@@ -1,38 +1,49 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  height:100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  background-color: #f9f9f9;
 }
 
-.App-link {
-  color: #61dafb;
+.content-card {
+  display: flex;
+  background-color: white;
+  flex-direction: column;
+  padding-right: 38.5px;
+  padding-left: 38.5px;
+  box-shadow: #cccccc 0px 2px 4px 0px;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@font-face {
+  font-family: avenir;
+  src: url(AvenirLTStd-Book.otf);
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+
+font {
+  font-family: avenir;
+  font-weight: 500;
+}
+
+input[type=number] {
+  border:none;
+  background-image:none;
+  outline: none;
+  width: inherit;
+  padding: none;
+  margin: none;
+  background-color:transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
 }
