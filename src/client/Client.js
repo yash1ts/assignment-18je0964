@@ -11,14 +11,11 @@ export default class Client {
     getCounterUpdateRoute = () => ('front-end.json');
 
     doFetch = async (method, url, data = {}) => {
-        // console.log(data);
         console.log(`Client: fetching [${method}] route ${this.baseUrl + url}`);
         try {
             const response = await axios({ method, url: this.baseUrl + url, data, headers: { 'Content-Type': 'application/json' } });
-            //   console.log(response);
             return response?.data;
         } catch (error) {
-            console.log(error?.response?.data);
             return error.response?.data || { error };
         }
     };

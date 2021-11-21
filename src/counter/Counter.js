@@ -20,6 +20,11 @@ function Counter() {
     });
   }, 300));
 
+  if(data<0){
+    if(store.counter>0)
+    setData(store.counter);
+  }
+
   useEffect(()=>{
     if (firstUpdate.current) {
       firstUpdate.current = false;
@@ -44,7 +49,7 @@ function Counter() {
       <div className='counter'>
         <button className='counter-inc' onClick={() => { changeValue(-1) }} >-</button>
         <div className='counter-txt' >
-          <input type="number" max="1000" min="1" value={Number(data).toString()} onChange={(event) => { setValue(Number(event.target.value)) }} />
+          <input type="number" max="1000" min="1" value={(Number(data)>0?data : '').toString()} onChange={(event) => { setValue(Number(event.target.value)) }} />
         </div>
         <button className='counter-dec' onClick={() => { changeValue(1) }}>+</button>
       </div>

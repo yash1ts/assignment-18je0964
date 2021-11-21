@@ -16,7 +16,7 @@ function CounterValue(){
     },[]);
   
     return(
-      <div style={{marginTop:10, marginBottom:10, padding:4, fontSize:'12px'}}>{`Counter value : ${store.counter}`}</div>
+      <div style={{marginTop:10, marginBottom:10, padding:4, fontSize:'12px'}}>{`Counter value : ${store.counter>0 ? store.counter: ''}`}</div>
     )
   }
 

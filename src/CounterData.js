@@ -5,7 +5,7 @@ export const CounterContext = createContext();
 
 export const CounterContextProvider = props => {
   const [data, setData] = useState({
-    counter: 1
+    counter: -1
   });
 
   const setCorrectedData = (value) => {
